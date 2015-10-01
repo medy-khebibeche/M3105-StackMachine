@@ -178,5 +178,9 @@ public class CPU
 		}		
 	}
 
+	public void clearStacks()
+	{
+		// TODO complete the method
+	}
 	// TODO something is missing here...
 }
