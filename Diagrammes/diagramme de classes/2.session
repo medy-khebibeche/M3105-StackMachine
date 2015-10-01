@@ -1,0 +1,14 @@
+window_sizes 1280 962 300 900 811 75
+diagrams
+  active  classdiagram_ref 128002 // diagramme de classes
+    893 706 100 4 26 0
+end
+show_stereotypes
+selected operation_ref 129154 // displayProgramTermination
+open
+  class_ref 128002 // MachineLauncher
+  class_ref 128130 // Machine
+  class_ref 128258 // CPU
+  class_ref 128386 // IO
+end
+end
