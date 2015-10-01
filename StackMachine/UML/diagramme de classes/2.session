@@ -1,0 +1,11 @@
+window_sizes 1200 896 300 900 682 82
+diagrams
+  active  classdiagram_ref 128002 // diagramme de classes
+    892 718 100 4 72 0
+end
+show_stereotypes
+open
+  class_ref 128130 // Machine
+  class_ref 134914 // Memory
+end
+end
