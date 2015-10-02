@@ -1,11 +1,11 @@
 package fr.iutvalence.info.m3105.stackmachine;
 
-public class Machine
+public class Machine implements IO
 {
 	private CPU cpu;
 	private Memory programMemory;
 
-	public Machine(CPU cpu, Memory programMemory, Stack expStack, Stack callStack, IO ioSystem)
+	public Machine(CPU cpu, Memory programMemory, Stack expStack, Stack callStack, IOConsole ioSystem)
 	{
 		super();
 		this.cpu = cpu;
