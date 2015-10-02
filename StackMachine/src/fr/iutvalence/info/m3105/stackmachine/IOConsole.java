@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-public class IOConsole
+public class IOConsole implements IO
 {
 	private BufferedReader in;
 	private PrintStream out;
