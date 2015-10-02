@@ -1,11 +1,18 @@
-window_sizes 1200 896 300 900 682 82
+window_sizes 1280 962 315 959 682 82
 diagrams
   active  classdiagram_ref 128002 // diagramme de classes
-    892 718 100 4 72 0
+    959 806 110 4 36 0
 end
 show_stereotypes
+selected operation_ref 136194 // write
 open
   class_ref 128130 // Machine
+  class_ref 128258 // CPU
+  class_ref 128386 // IOConsole
   class_ref 134914 // Memory
+  class_ref 141442 // Stack
+  class_ref 141570 // Program
+  class_ref 141698 // Instruction
+  class_ref 141826 // IO
 end
 end

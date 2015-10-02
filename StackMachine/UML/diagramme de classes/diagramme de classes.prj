@@ -365,26 +365,20 @@ ${members}}
     end
 
     class 134914 "Memory"
-      visibility package 
+      visibility package stereotype "interface"
       cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+      java_decl "${comment}${@}${visibility}interface ${name}${extends} {
 ${members}}
 "
-      php_decl ""
+      php_decl "${comment}interface ${name} {
+${members}}
+"
       python_2_2 python_decl ""
-      idl_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
       explicit_switch_type ""
       
-      attribute 135042 "programMemory"
-	private explicit_type ""
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 143746 // <association>
 	relation_ref 142466 // <association>
       end
@@ -392,29 +386,36 @@ ${members}}
       classrelation 146306 // <composition>
 	relation_ref 144130 // <composition>
       end
+
+      operation 136194 "write"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "op" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
     end
 
     class 141442 "Stack"
-      visibility package 
+      visibility package stereotype "interface"
       cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+      java_decl "${comment}${@}${visibility}interface ${name}${extends} {
 ${members}}
 "
-      php_decl ""
+      php_decl "${comment}interface ${name} {
+${members}}
+"
       python_2_2 python_decl ""
-      idl_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
       explicit_switch_type ""
       
-      attribute 141570 "size"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 144002 // <association>
 	relation_ref 142594 // <association>
       end
@@ -571,6 +572,126 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 145794 // <realization>
 	  b parent class_ref 141826 // IO
+      end
+    end
+
+    class 142082 "Stack8"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 146690 // <realization>
+	relation 144386 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 146690 // <realization>
+	  b parent class_ref 141442 // Stack
+      end
+    end
+
+    class 142210 "Stack16"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 146818 // <realization>
+	relation 144514 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 146818 // <realization>
+	  b parent class_ref 141442 // Stack
+      end
+    end
+
+    class 142338 "Stack32"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 146946 // <realization>
+	relation 144642 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 146946 // <realization>
+	  b parent class_ref 141442 // Stack
+      end
+    end
+
+    class 142466 "Memory8"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 147074 // <realization>
+	relation 144770 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 147074 // <realization>
+	  b parent class_ref 134914 // Memory
+      end
+    end
+
+    class 142594 "Memory16"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 147330 // <realization>
+	relation 145026 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 147330 // <realization>
+	  b parent class_ref 134914 // Memory
+      end
+    end
+
+    class 142722 "Memory32"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 147202 // <realization>
+	relation 144898 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 147202 // <realization>
+	  b parent class_ref 134914 // Memory
       end
     end
   end
